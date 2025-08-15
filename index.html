@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MnZ Salon — Beauty & Care</title>
+  <meta name="description" content="MnZ Salon: perawatan rambut & kecantikan. Booking online, lihat produk terlaris, testimoni pelanggan, dan kirim kritik & saran." />
+  <link rel="preload" href="assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/svg/scissors.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero" aria-label="MnZ Salon">
+        <img src="assets/svg/scissors.svg" alt="" class="brand-icon" />
+        <span>MnZ Salon</span>
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="navmenu" aria-label="Toggle menu">☰</button>
+        <ul id="navmenu" class="navmenu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#bestsellers">Produk</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#kritik">Kritik & Saran</a></li>
+          <li><a href="#alamat">Alamat</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero container">
+      <div class="hero-text">
+        <h1 class="reveal">Tetap Glowing di MnZ Salon</h1>
+        <p class="reveal">Sentuhan profesional untuk rambut, kuku, dan kulitmu—dengan vibe cerah pastel yang menenangkan.</p>
+        <div class="hero-cta reveal">
+          <a href="#booking" class="btn btn-primary">Booking Sekarang</a>
+          <a href="#bestsellers" class="btn btn-outline">Lihat Produk</a>
+        </div>
+      </div>
+      <div class="hero-art reveal">
+        <img src="assets/svg/spa.svg" alt="Ilustrasi spa" />
+      </div>
+    </section>
+
+    <!-- BEST SELLERS SLIDER (max 5) -->
+    <section id="bestsellers" class="bestsellers container">
+      <div class="section-head">
+        <h2>Produk Terlaris</h2>
+        <p>Pilihan favorit pelanggan—hanya untukmu.</p>
+      </div>
+
+      <div class="slider" role="region" aria-label="Slider produk terlaris">
+        <button class="slider-btn prev" aria-label="Produk sebelumnya">‹</button>
+        <div class="slider-track" id="sliderTrack">
+          <!-- 5 items max -->
+          <article class="card product">
+            <img src="assets/svg/hairdryer.svg" alt="Hair Dryer IonCare" />
+            <div class="card-body">
+              <h3>Hair Dryer IonCare</h3>
+              <p>Mengurangi frizz dengan teknologi ion.</p>
+              <button class="btn btn-pill add-cart">Tambah ke Keranjang</button>
+            </div>
+          </article>
+
+          <article class="card product">
+            <img src="assets/svg/comb.svg" alt="Sisir Detangler" />
+            <div class="card-body">
+              <h3>Sisir Detangler</h3>
+              <p>Rambut rapi tanpa tarik-tarikan.</p>
+              <button class="btn btn-pill add-cart">Tambah ke Keranjang</button>
+            </div>
+          </article>
+
+          <article class="card product">
+            <img src="assets/svg/nailpolish.svg" alt="Nail Polish Pastel Set" />
+            <div class="card-body">
+              <h3>Nail Polish Pastel Set</h3>
+              <p>Warna lembut: pink, hijau, kuning.</p>
+              <button class="btn btn-pill add-cart">Tambah ke Keranjang</button>
+            </div>
+          </article>
+
+          <article class="card product">
+            <img src="assets/svg/scissors.svg" alt="Guntting Pro Stylist" />
+            <div class="card-body">
+              <h3>Gunting Pro Stylist</h3>
+              <p>Presisi untuk berbagai gaya potong.</p>
+              <button class="btn btn-pill add-cart">Tambah ke Keranjang</button>
+            </div>
+          </article>
+
+          <article class="card product">
+            <img src="assets/svg/spa.svg" alt="Masker Hair Spa" />
+            <div class="card-body">
+              <h3>Masker Hair Spa</h3>
+              <p>Nutrisi ekstra untuk kilau sehat.</p>
+              <button class="btn btn-pill add-cart">Tambah ke Keranjang</button>
+            </div>
+          </article>
+        </div>
+        <button class="slider-btn next" aria-label="Produk selanjutnya">›</button>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="booking container">
+      <div class="section-head">
+        <h2>Booking Treatment</h2>
+        <p>Pilih jadwal dan layananmu—kami siap memanjakan.</p>
+      </div>
+
+      <form id="bookingForm" class="card form">
+        <div class="form-grid">
+          <label>Nama
+            <input type="text" name="nama" placeholder="Namamu" required>
+          </label>
+          <label>No. HP/WA
+            <input type="tel" name="telp" placeholder="08xxxxxxxxxx" required>
+          </label>
+          <label>Tanggal
+            <input type="date" name="tanggal" required>
+          </label>
+          <label>Jam
+            <input type="time" name="jam" required>
+          </label>
+          <label>Layanan
+            <select name="layanan" required>
+              <option value="">Pilih layanan</option>
+              <option>Haircut</option>
+              <option>Hair Coloring</option>
+              <option>Manicure/Pedicure</option>
+              <option>Facial</option>
+              <option>Hair Spa</option>
+            </select>
+          </label>
+          <label>Catatan
+            <textarea name="catatan" rows="3" placeholder="Preferensi gaya, alergi, dsb."></textarea>
+          </label>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Kirim Booking</button>
+          <p class="small muted">*Simulasi: data disimpan lokal (localStorage).</p>
+        </div>
+      </form>
+
+      <div id="bookingList" class="booking-list"></div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section id="testimoni" class="testi container">
+      <div class="section-head">
+        <h2>Testimoni Pelanggan</h2>
+        <p>Suara asli dari pelanggan setia MnZ Salon.</p>
+      </div>
+
+      <ul id="testiList" class="testi-list">
+        <!-- seeded by JS -->
+      </ul>
+
+      <form id="testiForm" class="card form">
+        <h3>Tulis Testimoni</h3>
+        <label>Nama (opsional)
+          <input type="text" name="nama" placeholder="Anonim boleh">
+        </label>
+        <label>Penilaian
+          <select name="rating" required>
+            <option value="">Pilih rating</option>
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+          </select>
+        </label>
+        <label>Testimoni
+          <textarea name="pesan" rows="3" required placeholder="Ceritakan pengalamanmu"></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Kirim Testimoni</button>
+      </form>
+    </section>
+
+    <!-- KRITIK & SARAN -->
+    <section id="kritik" class="kritik container">
+      <div class="section-head">
+        <h2>Kritik & Saran</h2>
+        <p>Bantu kami jadi lebih baik.</p>
+      </div>
+      <form id="feedbackForm" class="card form">
+        <label>Pesanmu
+          <textarea name="feedback" rows="4" required placeholder="Tulis kritik/saran"></textarea>
+        </label>
+        <div class="form-actions">
+          <button class="btn btn-outline" type="reset">Bersihkan</button>
+          <button class="btn btn-primary" type="submit">Kirim</button>
+        </div>
+      </form>
+      <div id="feedbackList" class="feedback-list"></div>
+    </section>
+
+    <!-- ALAMAT -->
+    <section id="alamat" class="alamat container">
+      <div class="section-head">
+        <h2>Alamat Toko</h2>
+        <p>JL. Orchid 09, Bali</p>
+      </div>
+      <div class="card map-hint">
+        <img src="assets/svg/comb.svg" alt="" />
+        <p>Temukan kami di JL. Orchid 09, Bali. Buka setiap hari 09.00–20.00 WITA.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> MnZ Salon. All rights reserved.</p>
+      <div class="socials" aria-label="Ikuti kami">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="TikTok">TT</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Kembali ke atas">↑</button>
+
+  <script defer src="assets/js/script.js"></script>
+</body>
+</html>
